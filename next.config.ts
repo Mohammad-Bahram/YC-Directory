@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    dangerouslyAllowSVG:true,
+    dangerouslyAllowSVG: true,
     domains: ["placehold.co"],
   },
 };
