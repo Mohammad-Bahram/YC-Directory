@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
-
+// import "easymde/dis/easymde.min.css";
 // Define the local font with correct paths
 
 export const metadata: Metadata = {
