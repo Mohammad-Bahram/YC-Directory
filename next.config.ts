@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     domains: ["placehold.co", "www.gravatar.com"],
   },
-  experimental: {
-    ppr: "incremental",
-  },
   devIndicators: {
     appIsrStatus: true,
     buildActivity: true,
