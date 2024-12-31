@@ -5,7 +5,15 @@ const nextConfig: NextConfig = {
 
   images: {
     dangerouslyAllowSVG: true,
-    domains: ["placehold.co"],
+    domains: ["placehold.co", "www.gravatar.com"],
+  },
+  experimental: {
+    ppr: "incremental",
+  },
+  devIndicators: {
+    appIsrStatus: true,
+    buildActivity: true,
+    buildActivityPosition: "bottom-right",
   },
 };
 
