@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import { Toaster } from "@/components/ui/toaster";
 // import "easymde/dis/easymde.min.css";
 // Define the local font with correct paths
 
@@ -18,6 +19,7 @@ export default function RootLayout({
         <main>
           <Navbar />
           {children}
+          <Toaster/>
         </main>
       </body>
     </html>

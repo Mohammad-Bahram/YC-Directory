@@ -13,6 +13,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   console.log(id);
   const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
   console.log(id);
+  console.log(post);
 
   if (!post) {
     return notFound();
@@ -36,17 +37,20 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               href={`/user/${post.author?._id}`}
               className="flex gap-2 items-center mb3"
             >
-              <Image
-                src={post.author.image}
-                alt="avatar"
-                width={64}
-                height={64}
-                className="rounded-full drop-shadow-lg"
-              />
+              {post.author?.image && (
+                <Image
+                  src={post.author.image}
+                  alt="avatar"
+                  width={64}
+                  height={64}
+                  className="rounded-full drop-shadow-lg"
+                />
+              )}
+
               <div>
-                <p className="text-20-mediom">{post.author.name}</p>
+                <p className="text-20-mediom">{post.author?.name}</p>
                 <p className="text-16-mediom !text-black-300">
-                  @{post.author.username}
+                  @{post.author?.username}
                 </p>
               </div>
             </Link>

@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const Navbar = async () => {
   const session = await auth();
+  console.log(session, "session");
 
   return (
     <div className="px-5 py-3 bg-white shadow-sm font-sans">
